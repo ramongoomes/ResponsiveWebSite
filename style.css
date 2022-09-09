@@ -74,39 +74,34 @@ button{
 }
 
 body{
+    display: flex;
+    flex-direction: row;
     font-family: "Epilogue", sans-serif;
     font-size: 16px;
     color: var(--text-light);
     background: var(--bg-dark);
+    flex-wrap: wrap;
 }
 
 #menu{
     
-    height: 90px;
-    width:  100wh;
-    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
 }
 
-.logo{
-    height: 100%;
-    width: 305px;
-}
 
-.logo img{
-    margin: 16px 0 0 135px;
-    height: 48px;
-    width: 170px;
-}
 
-.navigation{
-    position:absolute;
+.navigation{  
     width: 842px;
-    margin-left: 463px;
-    margin-top: 16px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .navigation ul{
-    display: flex;
+    display: contents;
     max-width: 515px;
     list-style: none;
     justify-content: space-between;
@@ -119,7 +114,7 @@ body{
 
 
 .navigation button{
-    position: absolute;
+    
     width: 138px;
     height: 48px;
     top: 5px;
