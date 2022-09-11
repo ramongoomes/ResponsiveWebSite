@@ -39,11 +39,13 @@ h2 {
   line-height: 64px;
   letter-spacing: -1px;
 }
+
 h3 {
   font-size: 40px;
   height: 800;
   line-height: 40px;
 }
+
 h4 {
   font-size: 24px;
   font-weight: 700;
@@ -62,6 +64,7 @@ p {
   font-weight: 400;
   line-height: 32px;
 }
+
 button {
   width: 138px;
   height: 48px;
@@ -79,6 +82,7 @@ body {
   color: var(--text-light);
   background: var(--bg-dark);
   flex-wrap: wrap;
+  min-width: 1223px;
 }
 
 #menu {
@@ -93,6 +97,10 @@ body {
   width: 842px;
   display: flex;
   justify-content: space-around;
+}
+
+.navigation-mobile {
+  display: none;
 }
 
 .navigation ul {
@@ -172,19 +180,56 @@ body {
 /* RESPONSIVIDADE */
 
 @media (max-width: 412px) {
+  body{
+    min-width: 400px;
+  }
   .navigation,
   .menu-button {
     display: none;
   }
-
-  .logo{
   
-    position: absolute;
+  .logo {
+
+    /* position: absolute; */
     left: 23px;
   }
+#menu{
+  justify-content: space-between;
+  margin-left:23px;
+  margin-right: 23px;
+}
+  .navigation-mobile{
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    right: 23px;
+    width: 48px;
+    height: 48px;
+    border: 0.5px solid var(--text-light-gray);
+    border-radius: 5px;
+    
+  }
+
+  .navigation-mobile .details-menu{
+    width: 16px;
+    height: 2px;
+    background-color: var(--text-light);
+    margin: 1.5px;
+    border-radius: 1px;
+  }
+
+  .navigation-mobile:hover{
+    background: var(--bg-accent);
+    border: var(--text-light-gray);
+    transition: 0.9s;
+  }
+
   .container {
     display: flex;
     max-width: 329px;
+    top: 15px;
   }
 
   .container .content-container {
@@ -208,6 +253,7 @@ body {
     line-height: 65px;
     position: relative;
   }
+
   .container .image-container {
     width: 329px;
     height: 318px;
